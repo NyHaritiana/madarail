@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      admin
+    </title>
+    <meta name="description" content="Simple landind page" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <style>
+      .gradient {
+        background: linear-gradient(90deg, #3379d5 0%, #9c41e7 100%);
+      }
+      .neon {
+      box-shadow: 0 0 1px #fff,
+                  0 0 4px #fff,
+                  0 0 6px rgba(0, 77, 177, 0.438)
+      }
+    </style>
+  </head>
+  <body style="font-family: 'Source Sans Pro', sans-serif;">
+    <!--Nav-->
+    <nav id="header" class="fixed w-full z-30 top-0 text-white gradient">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+        <div class="pl-4 flex items-center">
+          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+
+              <img id="rectangle" src="logo.png" class="fill-current inline w-10 pb-2">
+            MADARAIL
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="#" id="acc">Acceuil</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" id="resa" href="#">Reservation</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" id="tarif" href="#">Tarif</a>
+            </li>
+          </ul>
+          <button
+            id="navAction"
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          >
+            Reserver
+          </button>
+        </div>
+      </div>
+      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+    <!-- blogs -->
+    <div class="mx-auto p-4 mt-28">
+      <div class="flex flex-wrap -mx-4">
+        <!-- blog1 -->
+        <div class="w-full md:w-1/2 px-4 mb-4">
+          <div class="neon bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-center font-semibold leading-7 text-gray-900">Train</h2> 
+            <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
+              <thead class="bg-gray-100 dark:bg-gray-700">
+                  <tr>
+                      <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
+                          Immatriculation
+                      </th>
+                      <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
+                          Itinéraire
+                      </th>
+                      <th scope="col" class="p-4">
+                        <span class="sr-only">Edit</span>
+                    </th>
+                  </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
+                  <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">001</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white text-center">MKR</td>
+                      <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                          <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                      </td>
+                  </tr>
+                  <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">002</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white text-center">TNR</td>
+                      <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                          <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                      </td>
+                  </tr>
+                  <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">003</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white text-center">WFI</td>
+                      <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                          <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                      </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="neon bg-white p-6 rounded-lg shadow-lg mt-12">
+            <h2 class="text-center font-semibold leading-7 text-gray-900">Catégorie</h2> 
+            <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
+              <thead class="bg-gray-100 dark:bg-gray-700">
+                  <tr>
+                      <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
+                          Libelle
+                      </th>
+                      <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
+                          Immatriculation
+                      </th>
+                      <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
+                          Nb Place
+                      </th>
+                      <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
+                          Frais
+                      </th>
+                      <th scope="col" class="p-4">
+                        <span class="sr-only">Edit</span>
+                    </th>
+                  </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
+                  <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">C-1</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white text-center">T-001</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">50</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">5000</td>
+                      <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                          <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                      </td>
+                  </tr>
+                  <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">C-2</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white text-center">T-002</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">80</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">2000</td>
+                      <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                          <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                      </td>
+                  </tr>
+                  <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">C-3</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white text-center">T-003</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">100</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">1000</td>
+                      <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                          <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                      </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="neon bg-white p-6 rounded-lg shadow-lg mt-12">
+            <h2 class="text-center font-semibold leading-7 text-gray-900">Itinéraire</h2> 
+            <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
+              <thead class="bg-gray-100 dark:bg-gray-700">
+                  <tr>
+                      <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
+                          Départ
+                      </th>
+                      <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
+                          Déstination
+                      </th>
+                      <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
+                          Code Itinéraire
+                      </th>
+                      <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
+                          Jour
+                      </th>
+                      <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
+                          Heure
+                    </th>
+                      <th scope="col" class="p-4">
+                        <span class="sr-only">Edit</span>
+                    </th>
+                  </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
+                  <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">Tana</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white text-center">Fianar</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">WFI</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">Lundi</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">07:30</td>
+                      <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                          <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                      </td>
+                  </tr>
+                  <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">Ambila</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white text-center">Tmtv</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">ATV</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">Mercredi</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">08:00</td>
+                      <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                          <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                      </td>
+                  </tr>
+                  <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">Mnkr</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white text-center">Fianar</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white text-center">WFM</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">Vendredi</td>
+                      <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">07:00</td>
+                      <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                          <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                      </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- blog2 -->
+        <div class="w-full md:w-1/2 px-4 mb-4">
+          <div class="neon bg-white p-6 rounded-lg shadow-lg">
+            <form>
+              <div class="space-y-12">
+                <form>
+                  <div class="border-b border-gray-900/10 pb-12">
+                    <h2 class="text-base font-semibold leading-7 text-gray-900">Train</h2>            
+                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                      <div class="sm:col-span-4">
+                        <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Immatriculation</label>
+                        <div class="mt-2">
+                          <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                            <input type="text" name="username" id="username" autocomplete="username" class="block flex-1 border-0 bg-transparent py-1.5 pl-2 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="T-001">
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="sm:col-span-3">
+                        <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Itinéraire</label>
+                        <div class="mt-2">
+                          <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                            <option>United States</option>
+                            <option>Canada</option>
+                            <option>Mexico</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 flex items-center justify-end gap-x-6">
+                    <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Annuler</button>
+                    <button type="submit" class="rounded-md gradient px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Confirmer</button>
+                  </div>
+                </form>
+                
+                <form>
+                  <div class="border-b border-gray-900/10 pb-12">
+                    <h2 class="text-base font-semibold leading-7 text-gray-900">Catégorie</h2>            
+                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                      <div class="sm:col-span-4">
+                        <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Libelle Classe</label>
+                        <div class="mt-2">
+                          <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                            <input type="text" name="username" id="username" autocomplete="username" class="block flex-1 border-0 bg-transparent py-1.5 pl-2 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="C-1">
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="sm:col-span-4">
+                        <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Immatriculation</label>
+                        <div class="mt-2">
+                          <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                            <input type="text" name="username" id="username" autocomplete="username" class="block flex-1 border-0 bg-transparent py-1.5 pl-2 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="T-001">
+                          </div>
+                        </div>
+                      </div>  
+              
+                      <div class="sm:col-span-2 sm:col-start-1">
+                        <label for="city" class="block text-sm font-medium leading-6 text-gray-900">Nombre Place</label>
+                        <div class="mt-2">
+                          <input type="number" name="city" id="city" autocomplete="address-level2" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 pl-2 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                      </div>
+              
+                      <div class="sm:col-span-2">
+                        <label for="region" class="block text-sm font-medium leading-6 text-gray-900">Frais</label>
+                        <div class="mt-2">
+                          <input type="number" name="city" id="city" autocomplete="address-level2" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 pl-2 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Ariary">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 flex items-center justify-end gap-x-6">
+                    <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Annuler</button>
+                    <button type="submit" class="rounded-md gradient px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Confirmer</button>
+                  </div>
+                </form>
+
+                <form>
+                  <div class="border-b border-gray-900/10 pb-12">
+                    <h2 class="text-base font-semibold leading-7 text-gray-900">Itinéraire</h2>            
+                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">  
+                      <div class="sm:col-span-2 sm:col-start-1">
+                        <label for="city" class="block text-sm font-medium leading-6 text-gray-900">Départ</label>
+                        <div class="mt-2">
+                          <input type="text" name="city" id="city" autocomplete="address-level2" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 pl-2 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="lieu">
+                        </div>
+                      </div>
+              
+                      <div class="sm:col-span-2">
+                        <label for="region" class="block text-sm font-medium leading-6 text-gray-900">Destination</label>
+                        <div class="mt-2">
+                          <input type="text" name="city" id="city" autocomplete="address-level2" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 pl-2 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="lieu">
+                        </div>
+                      </div>
+
+                      <div class="sm:col-span-4">
+                        <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Code Itinéraire</label>
+                        <div class="mt-2">
+                          <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                            <input type="text" name="username" id="username" autocomplete="username" class="block flex-1 border-0 bg-transparent py-1.5 pl-2 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="TNR">
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="sm:col-span-4">
+                        <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Jour</label>
+                        <div class="mt-2">
+                          <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                            <option>Dimanche</option>
+                            <option>Lundi</option>
+                            <option>Mardi</option>
+                            <option>Mercredi</option>
+                            <option>Jeudi</option>
+                            <option>Vendredi</option>
+                            <option>Samedi</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="sm:col-span-4">
+                        <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Heure</label>
+                        <div class="mt-2">
+                          <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                            <input type="time" name="username" id="username" autocomplete="username" class="block flex-1 border-0 bg-transparent py-1.5 pl-2 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="T-001">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 flex items-center justify-end gap-x-6">
+                    <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Annuler</button>
+                    <button type="submit" class="rounded-md gradient px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Confirmer</button>
+                  </div>
+                </form>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-white">
+      <div class="container mx-auto px-8">
+        <div class="w-full flex flex-col md:flex-row py-6">
+          <div class="flex-1 mb-6 text-black">
+            <a class="text-purple-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+              <img src="logobody.png" class="fill-current inline w-10 pb-4">
+              MADARAIL
+            </a>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Links</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Social</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Company</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+
+
+
+
+    
+    <!-- <script>
+      window.addEventListener('scroll', function() {
+          var rectangle = document.getElementById('rectangle');
+          var acc = document.getElementById('acc');
+          var resa = document.getElementById('resa');
+          var tarif = document.getElementById('tarif');
+          if (window.scrollY > 40) {
+              rectangle.src = 'logobody.png';
+              acc.style.color = "black";
+              resa.style.color = "black";
+              tarif.style.color = "black";
+          } else {
+              rectangle.src = 'logo.png';
+              acc.style.color = "white";
+              resa.style.color = "white";
+              tarif.style.color = "white";
+          }
+      });
+  </script>
+    <script>
+      var scrollpos = window.scrollY;
+      var header = document.getElementById("header");
+      var navcontent = document.getElementById("nav-content");
+      var navaction = document.getElementById("navAction");
+      var brandname = document.getElementById("brandname");
+      var toToggle = document.querySelectorAll(".toggleColour");
+
+      document.addEventListener("scroll", function () {
+        /*Apply classes for slide in bar*/
+        scrollpos = window.scrollY;
+
+        if (scrollpos > 10) {
+          header.classList.add("bg-white");
+          navaction.classList.remove("bg-white");
+          navaction.classList.add("gradient");
+          navaction.classList.remove("text-gray-800");
+          navaction.classList.add("text-white");
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-gray-800");
+            toToggle[i].classList.remove("text-white");
+          }
+          header.classList.add("shadow");
+          navcontent.classList.remove("bg-gray-100");
+          navcontent.classList.add("bg-white");
+        } else {
+          header.classList.remove("bg-white");
+          navaction.classList.remove("gradient");
+          navaction.classList.add("bg-white");
+          navaction.classList.remove("text-white");
+          navaction.classList.add("text-gray-800");
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-white");
+            toToggle[i].classList.remove("text-gray-800");
+          }
+
+          header.classList.remove("shadow");
+          navcontent.classList.remove("bg-white");
+          navcontent.classList.add("bg-gray-100");
+        }
+      });
+    </script> -->
+
+    <script>
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+      var navAction = document.getElementById("navAction");
+      var acc = document.getElementById('acc');
+      var resa = document.getElementById('resa');
+      var tarif = document.getElementById('tarif');
+
+      document.onclick = check;
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden");
+              acc.style.color = "black";
+              resa.style.color = "black";
+              tarif.style.color = "black";
+            } else {
+              navMenuDiv.classList.add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv.classList.add("hidden");
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>
